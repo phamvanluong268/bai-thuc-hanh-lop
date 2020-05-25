@@ -1,6 +1,6 @@
-ds=input(' Danh sách: ').split()
-#in cả dãy vừa nhập
-print(ds)
-# in dãy vừa nhập, mỗi phần tử trên một dòng
-for so in ds:
-    print(so)
+def file_read_from_head(fname, nlines):
+    from itertools import islice
+    with open(fname) as f:
+        for line in islice(f, nlines):
+            print(line)
+file_read_from_head('text.txt',2)

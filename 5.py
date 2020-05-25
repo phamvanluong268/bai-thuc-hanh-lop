@@ -1,6 +1,8 @@
-ds=input(' Danh sách: ').split()
-#in cả dãy vừa nhập
-print(ds)
-# in dãy vừa nhập, mỗi phần tử trên một dòng và đảo ngược lí thuyết
-for so in ds.__reversed__():
-    print(so)
+def file_read(fname):
+    from itertools import islice
+    with open(fname,"w") as myfile:
+        myfile.write("python exercises\n")
+        myfile.write("java exercises")
+    txt=open(fname)
+    print(txt.read())
+file_read('text.txt')
